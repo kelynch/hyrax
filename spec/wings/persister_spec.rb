@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 require 'spec_helper'
-require 'wings/persister'
-require 'wings/metadata_adapter'
+require 'wings'
+require 'valkyrie/specs/shared_specs'
 
 RSpec.describe Wings::Persister do
+  # it_behaves_like "a Valkyrie::Persister"
   let(:adapter) { Wings::MetadataAdapter.new }
   let(:subject) { described_class.new(adapter: adapter) }
 
@@ -11,13 +12,5 @@ RSpec.describe Wings::Persister do
     expect(subject).to respond_to(:save)
     expect(subject).to respond_to(:delete)
     expect(subject).to respond_to(:adapter)
-  end
-
-  describe '.save' do
-
-  end
-
-  describe '.delete' do
-
   end
 end
