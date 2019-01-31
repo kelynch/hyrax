@@ -9,3 +9,6 @@ end
 require 'valkyrie'
 require 'wings/resource_factory'
 require 'wings/valkyrie_monkey_patch'
+require 'wings/metadata_adapter'
+require 'wings/persister'
+require 'wings/query_service'
